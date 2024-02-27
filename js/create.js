@@ -3,6 +3,7 @@ const mygtukastructuraDOM = document.getElementById('mygtukastructura');
 const btnDOM = document.getElementById('btn');
 const vklDOM = document.getElementById('vkl');
 
+
 let countcircle = 1;
 let HTML = '<div class="circle">1</div>';
 
@@ -26,8 +27,10 @@ btnDOM.addEventListener('click', function () {
 
 function changeColorCircles() {
     const circleDOM = document.querySelector('.circle');
+    
     circleDOM.style.backgroundColor = "red";
     circleDOM.style.transition = "background-color 2s ease"; 
     
 }
+
 vklDOM.addEventListener('click', changeColorCircles);
