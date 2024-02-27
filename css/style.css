@@ -12,8 +12,8 @@ body {
     padding: 2rem;
 }
 .btn{
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
     background-color: rgb(214, 50, 50);
     color: rgb(250, 250, 250);
     margin-top: 8rem;
@@ -39,12 +39,12 @@ body {
 .circle{
     width: 10rem;
     height: 10rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3rem;
     font-weight: bold;
     color:rgb(254, 254, 254);
-    background-color: black;
+    background-color: rgb(182, 176, 176);
     border-radius: 50%;
     justify-self:center;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 
 .mygtukastructura{
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 }
@@ -71,19 +71,21 @@ body {
     font-size: 2rem;
     width: 4rem;
     height: 8rem;
+    border-radius: 50%;
     background-color: rgb(139, 154, 139);
     cursor: pointer;
+    transition: all 1s;
   
     
 }
-.mygtukastructura.vkl.active{
-    background-color: red;
-    transform: rotate(90deg);
+.mygtukastructura>.vkl.active{
+    background-color: rgb(36, 37, 37);
+    transform: rotate(45deg);
 }
 .mygtukastructura .vkl:hover {
     background-color: #aaa;
 }
-.kaitlentestructura.circle.active{
+.kaitlentestructura>.circle.active{
     background-color: #f00;
     transition: all 2s;
 }
