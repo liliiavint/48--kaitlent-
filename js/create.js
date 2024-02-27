@@ -1,36 +1,52 @@
 const kaitlentestructuraDOM = document.getElementById('kaitlentestructura');
 const mygtukastructuraDOM = document.getElementById('mygtukastructura');
-const btnDOM = document.getElementById('btn');
-const vklDOM = document.getElementById('vkl');
 
 
-let countcircle = 1;
-let HTML = '<div class="circle">1</div>';
 
+let countcircle = 0;
+let HTML = ' ';
 function addCircle() {
     HTML += `<div class="circle">${++countcircle}</div>`;
     kaitlentestructuraDOM.innerHTML = HTML;
 }
-let countmygtuka = 1;
-let HTML2 = '<button id="vkl" class="vkl">1</button>';
+
+
+let countmygtuka = 0;
+let HTML2 = ' ';
 function addMygtuka() {
-    HTML2 += `<button id="vkl" class="vkl">${++countmygtuka}</button>`;
+    HTML2 += `<div class="vkl">${++countmygtuka}</div>`;
     mygtukastructuraDOM.innerHTML = HTML2;
 }
 
-btnDOM.addEventListener('click', function () {
+btn.addEventListener('click', function () {
     addMygtuka();
     addCircle();
+    const circleDOM = document.querySelectorAll('.circle');
+    const vklDOM = document.querySelectorAll('.vkl');
+    
+        for (let i = 0; i < vklDOM.length; i++) {
+            vklDOM[i].addEventListener('click', () => {
+                vklDOM[i].classList.toggle('active');
+                circleDOM[i].classList.toggle('active');
+            });
+        }
+
+
 });
 
 
-
-function changeColorCircles() {
-    const circleDOM = document.querySelector('.circle');
-    
-    circleDOM.style.backgroundColor = "red";
-    circleDOM.style.transition = "background-color 2s ease"; 
-    
+/*function changeColorCircle(circleIndex) {
+    const circleDOMs = document.querySelectorAll('.circle');
+    circleDOMs[circleIndex].style.backgroundColor = "red";
+    circleDOMs[circleIndex].style.transition = "background-color 2s ease";
 }
 
-vklDOM.addEventListener('click', changeColorCircles);
+
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('vkl')) {
+        const vklButtons = document.querySelectorAll('.vkl');
+        const circleIndex = Array.from(vklButtons).indexOf(event.target);
+        changeColorCircle(circleIndex);
+        event.target.disabled = true; 
+    }
+});*/

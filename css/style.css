@@ -22,9 +22,9 @@ body {
 
 }
 .structura{
-    border: 2rem solid grey;
-    border-radius: 2rem;
-    width: 100rem;
+    border: 0.5rem solid grey;
+    border-radius: 3rem;
+    width: 60rem;
 
 
 }
@@ -49,8 +49,11 @@ body {
     justify-self:center;
     align-items: center;
     text-align: center;
+    transition: all 5s;
     
 }
+
+
 .mygtukastructura{
     display: flex;
     gap: 2rem;
@@ -68,7 +71,20 @@ body {
     font-size: 2rem;
     width: 4rem;
     height: 8rem;
-    background-color: darkgreen;
+    background-color: rgb(139, 154, 139);
+    cursor: pointer;
   
     
 }
+.mygtukastructura.vkl.active{
+    background-color: red;
+    transform: rotate(90deg);
+}
+.mygtukastructura .vkl:hover {
+    background-color: #aaa;
+}
+.kaitlentestructura.circle.active{
+    background-color: #f00;
+    transition: all 2s;
+}
+
